@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <script type="text/javascript">
+              window.onload = function(){
+              (function(d, script) {
+              script = d.createElement('script');
+              script.type = 'text/javascript';
+              script.async = true;
+              script.src = 'https://w.app/widget-v1/nAegx6.js';
+              d.getElementsByTagName('head')[0].appendChild(script);
+              }(document));
+              };
+              </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COB - Centro Oftalmológico Ouro Branco</title>
+    <style> 
+        /* CONFIGURAÇÕES GERAIS */
+        :root {
+            --cor-principal: #0077b6; /* Azul médico */
+            --cor-secundaria: #00b4d8; /* Azul claro */
+            --cor-escura: #2b2d42; /* Textos escuros */
+            --cor-clara: #f8f9fa; /* Fundos claros */
+            --fonte-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--cor-escura);
+            line-height: 1.5;
+            font-size:large;
+            background-color: #ffffff;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- CABEÇALHO & MENU --- */
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+
+        header img {
+            max-height: 125px;
+            width: auto;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--cor-principal);
+        }
+
+        /* --- BANNER PRINCIPAL --- */
+        .hero {
+            background-image: url('./imagens/background\ cortado\ sem\ plaquinha.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            color: #ffffff;
+            margin-top: 80px;
+        }
+
+        .hero-content {
+            max-width: 600px;
+            background-color: rgba(43, 45, 66, 0.65);
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--cor-principal);
+            color: #ffffff;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #005683;
+        }
+
+        /* --- SEÇÕES COMUNS --- */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: var(--cor-secundaria);
+            margin: 10px auto 0;
+        }
+
+        /* --- SOBRE A CLÍNICA --- */
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-img {
+            flex: 1;
+        }
+
+        .about-img img {
+            width: 100%;
+            max-width: 450px;
+            border-radius: 8px;
+            box-shadow: 0 15px 25px rgba(0,0,0,0.1);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- SERVIÇOS / ESPECIALIDADES --- */
+        .services {
+            background-color: var(--cor-clara);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: #ffffff;
+            padding: 60px 50px;
+            border-radius: 50px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .service-icon {
+            font-size: 45px;
+            color: var(--cor-principal);
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .service-card p {
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .btn-sm {
+            padding: 8px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            border: none;
+            background-color: var(--cor-secundaria);
+            color: white;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn-sm:hover {
+            background-color: var(--cor-principal);
+        }
+
+        /* --- ESTRUTURA DAS TELAS MODAIS (POPUPS) --- */
+        .modal {
+            display: none; /* Escondido por padrão */
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(4px);
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        .modal-content {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 650px;
+            max-height: 85vh;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.3);
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            color: #aaa;
+            transition: color 0.2s;
+        }
+
+        .close-modal:hover {
+            color: var(--cor-escura);
+        }
+
+        .modal h2 {
+            color: var(--cor-principal);
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--cor-clara);
+            padding-bottom: 10px;
+        }
+
+        .modal h3 {
+            margin: 15px 0 5px 0;
+            font-size: 18px;
+        }
+
+        .modal ul {
+            list-style-position: inside;
+            margin-bottom: 15px;
+            padding-left: 5px;
+        }
+
+        .modal ul li {
+            margin-bottom: 6px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* --- CONTATO & LOCALIZAÇÃO --- */
+        .contact-container {
+            display: flex;
+            gap: 50px;
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-info p {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-map {
+            flex: 1;
+            height: 350px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .contact-map iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* --- RODAPÉ --- */
+        footer {
+            background-color: var(--cor-escura);
+            color: #ffffff;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 15px;
+        }
+
+        /* --- RESPONSIVIDADE --- */
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            nav ul li {
+                margin: 0 10px;
+            }
+            .hero h1 {
+                font-size: 32px;
+            }
+            .about-content, .contact-container {
+                flex-direction: column;
+            }
+            .modal-content {
+                padding: 25px;
+            }
+        }
+        .about-img2{
+            height: 400px;
+            width: 400px;
+            object-fit: cover;
+            margin-left: 15%;
+            border-radius: 10%;
+        }
+          
+        .about-img3{
+            height: 400px;
+            width: 400px;
+            object-fit: cover;
+            margin-left: 15%;
+            border-radius: 10%;
+        }
+          
+        .about-img4{
+            height: 400px;
+            width: 400px;
+            object-fit: cover;
+            margin-left: 15%;
+            border-radius: 10%;
+        }
+        .about-img5{
+          height: 400px;
+            width: 400px;
+            object-fit: cover;
+            margin-left: 15%;
+            border-radius: 10%;   
+        }
+        .container-profissionais{
+            display:flex;
+            flex-direction:flex column;
+            gap: 30px;
+            
+        }
+</style>
+</head>
+<body>
+
+    <!-- CABEÇALHO -->
+    <header>
+        <div class="container">
+            <a href="./index.html">
+            <img src="./imagens/Logotipo_Cob.png" alt="COB Logotipo" ></a>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="https://w.app/naegx6">Agende sua consulta</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- BANNER PRINCIPAL -->
+    <section id="inicio" class="hero">
+        <div class="container">
+        </div>
+    </section>
+
+    <!-- SOBRE NÓS -->
+    <section id="sobre">
+        <div class="container">
+            <h2 class="section-title">Sobre o COB</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Desde 2020, o Centro Oftalmológico Ouro Branco atende com excelência a nossa região. Fundado pela <strong>Dra. Daniela Rios</strong>, médica oftalmologista com mais de 20 anos de experiência, o centro oferece serviços completos para homens, mulheres e crianças.</p>
+                    <br>
+                    <p>Hoje contamos com 5 profissionais:</p>
+                    <br>
+                    <ul>
+                        <li><strong>Dra. Daniela Rios</strong> - Médica Oftalmologista</li>
+                        <li><strong>Dra. Fernanda Marques de Melo Araújo</strong> - Médica Otorrinolaringologista</li>
+                        <li><strong>Dra. Thabata</strong> - Médica Oftalmologista (Especialista em Oftalmopediatria)</li>
+                        <li><strong>Dra. Marmed</strong> - Médica Oftalmologista (Especialista em Plástica Ocular)</li>
+                        <li><strong>Dr. Walace</strong> - Médico Neurologista e Neurocirurgião Especialista</li>
+                    </ul>
+                    <br>
+                    <p>Oferecemos um atendimento acolhedor, ético e seguro em um ambiente moderno, planejado especialmente para o seu total conforto.<br>
+                        <br>
+                       <li><strong>Missão:</strong>Cuidar da saúde ocular com excelência, atenção individualizada e atendimento humanizado.<br>
+                       <li></li> <strong>Visão:</strong>Ser referência em oftalmologia pela confiança, acolhimento e qualidade no cuidado ao paciente.<br>
+                       <li></li> <strong>Valores:</strong> Ética, empatia, excelência médica, respeito, inovação e compromisso com o paciente.<br>
+                </div>
+                <div class="about-img">
+                    <img src="./imagens/faixada clinica.png" alt="Fachada do Centro Oftalmológico COB">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section id="servicos" class="services">
+        <div class="container">
+            <h2 class="section-title">Nossos Serviços</h2>
+            <div class="services-grid">
+                
+                <!-- Caixa 1: Consultas -->
+                <div class="service-card">
+                    <div>
+                        <div class="service-icon">📋</div>
+                        <h3>Consultas</h3>
+                        <p>Atendimento especializado nas áreas de oftalmologia, otorrinolaringologia e neurologia.</p>
+                    </div>
+                    <button class="btn-sm" onclick="openModal('modal-consultas')">Ver Consultas</button>
+                </div>
+
+                <!-- Caixa 2: Especialidades / Serviços -->
+                <div class="service-card">
+                    <div>
+                        <div class="service-icon">👓</div>
+                        <h3>Serviços</h3>
+                        <p>Soluções completas para estrabismo, plástica ocular, avaliações neurológicas e cuidados preventivos.</p>
+                    </div>
+                    <button class="btn-sm" onclick="openModal('modal-servicos')">Ver Serviços</button>
+                </div>
+
+                <!-- Caixa 3: Exames -->
+                <div class="service-card">
+                    <div>
+                        <div class="service-icon">🧪</div>
+                        <h3>Exames oftalmológicos</h3>
+                        <p>Realização de exames oftalmológicos avançados precisos e seguros.</p>
+                    </div>
+                    <button class="btn-sm" onclick="openModal('modal-exames')">Ver Exames</button>
+                </div>
+
+    <div class="service-card">
+                    <div>
+                        <div class="service-icon">🧪</div>
+                        <h3>Exames Otorrinolaringologia</h3>
+                        <p>Realização de exames de otorrinolaringologia avançados, precisos e seguros.</p>
+                    </div>
+
+                    <button class="btn-sm" onclick="openModal('modal-exames-otorrino')">
+                        Ver Exames
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ================= SCREENS / MODAIS INTERATIVOS ================= -->
+    
+    <!-- Tela de Consultas -->
+    <div id="modal-consultas" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal-consultas')">&times;</span>
+            <h2>Agendamento de Consultas</h2>
+            <p>Nos temos as seguintes consultas disponiveis:</p>
+            
+            <h3>Oftalmologia</h3>
+            <p>Dedicada a proteger e cuidar de cada detalhe da sua visão, desde os primeiros passos na infância até a melhor idade.</p>
+            
+            <h3>Otorrinolaringologia</h3>
+            <p>Um olhar atento e especializado para a saúde do seu ouvido, nariz e garganta, devolvendo o equilíbrio e o conforto ao seu dia a dia.</p>
+            
+            <h3>Neurologia e Neurocirurgia</h3>
+            <p>Diagnóstico, acompanhamento e tratamentos precisos para cuidar do seu sistema nervoso com a máxima segurança e dedicação.</p>
+
+            <h3>Psiquiatria</h3>
+            <p>Um espaço de escuta ética, acolhimento e suporte médico focado no equilíbrio e na restauração da sua saúde mental.</p>
+
+            <h3>Psicologia</h3>
+            <p>Apoio terapêutico humanizado para te guiar no autoconhecimento, na superação de desafios emocionais e no cuidado com a sua mente.</p>
+            <br>
+            <a href="https://w.app/naegx6" class="btn" onclick="closeModal('modal-consultas')">Solicitar Agendamento</a>
+        </div>
+    </div>
+
+    <!-- Tela de Serviços-->
+    <div id="modal-servicos" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal-servicos')">&times;</span>
+            <h2>Nossos serviços disponiveis</h2>
+            <p>No COB, unimos profissionais especializados para tratar condições específicas com técnicas e cirúrgicas como:</p>
+           <li>Tonometria</li>
+           
+           <li>Mapeamento de retina</li>
+
+           <li>Campo visual</li>
+
+           <li>Gonioscopia</li>
+
+           <li>Paquimetria</li>
+
+           <li>OCT</li>
+
+           <li>Retinografia</li>
+
+           <li>Testes de lente de contato</li>
+
+           <li>Teste provocativo</li>
+
+           <li>Curva de pressão</li>
+
+           <li>Corpo estranho</li>
+           
+           <li>Biometria ultrasonica</li>
+
+           <li>Biomicroscopia</li>
+
+           <li>Microscopia</li>
+
+           <li>Topografia</li>
+            <br>
+            <a href="https://w.app/naegx6" class="btn" onclick="closeModal('modal-servicos')">Falar com Especialista</a>
+        </div>
+    </div>
+
+    <!-- Tela de Exames -->
+    <div id="modal-exames" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal-exames')">&times;</span>
+            <h2>Exames Oftalmológico em geral:</h2>
+            <p>Estrutura avançada para mapear a saúde dos seus olhos com precisão absoluta.<br> <p><strong>Realizamos os seguintes procedimentos:</strong></p>
+            
+            <ul>
+                <li>Tonometria</li>
+                <li>Mapeamento de retina </li>
+                <li>Campo visual</li>
+                <li>Gonioscopia</li>
+                <li>Paquimetria</li>
+                <li>OCT</li>
+                <li>Retinografia</li>
+                <li>Teste de lente de contato</li>
+                <li>Teste Ortóptico</li>
+                <li>Tratamento clínico e cirúrgico de estrabismo</li>
+            </ul>
+            <br>
+            <a href="https://w.app/naegx6" class="btn" onclick="closeModal('modal-exames')">Marcar meu Exame</a>
+        </div>
+    </div>
+
+    <div id="modal-exames-otorrino" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal-exames-otorrino')">&times;</span>
+            <h2>Exames de otorrinolaringologia em geral:</h2>
+            <p>Estrutura avançada para mapear a sua saúde.<br> <p><strong>Realizamos os seguintes procedimentos:</strong></p>
+            
+            <ul>
+                <li>Videonafaringoscopia</li>
+                <li>Videolaringoscopia</li>
+                <li>Teste vestibular - vídeo hit </li>
+                <li>Manobras para vertigem posicional </li>
+                <li>Lavagem de ouvidos</li>
+            </ul>
+            <br>
+            <a href="https://w.app/naegx6" class="btn" onclick="closeModal('modal-exames-otorrino')">Marcar meu Exame</a>
+        </div>
+    </div>
+
+    <!-- CONTATO & LOCALIZAÇÃO -->
+    <section id="contato">
+        <div class="container">
+            <h2 class="section-title">Fale Conosco</h2>
+            <div class="contact-container">
+                
+                <div class="contact-info">
+                    <h3>Canais de Atendimento</h3>
+                    <br>
+                    <p><strong>📱 WhatsApp:</strong><a href="https://w.app/naegx6">31 9970-7108</a></p>
+                    <p><strong>✉️ E-mail:</strong>centrooftalmologicoob.@gmail.com</p>
+                    <p><strong>📍 Endereço:</strong> Avenida João Monlevade, 777 - Loja 3 </p>
+                    <p><strong>⏰ Horário:</strong> Seg a Sex: 08h às 16h </p>
+                </div>
+
+                <div class="contact-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3736.8745219603315!2d-43.71612472394506!3d-20.51136945667702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa3e502e3294405%3A0x894efb3cde466dcf!2sCOB%20-%20Centro%20Oftalmol%C3%B3gico%20Ouro%20Branco!5e0!3m2!1spt-BR!2sbr!4v1779921928057!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
+    <section>
+            <h2 class="section-title">Profissionais</h2>
+
+            <section><div><class class="container-profissionais">
+            <img src="./imagens/dr daniella hd.png" class="about-img5" alt="Doutora daniella">
+            <p><strong>Dr. Daniela Fernandes</strong><br>
+            >Médica pela Faculdade de Ciências Médicas de Minas Gerais.<br> 
+            >Especialista em Oftalmologia pelo Hospital Santa Casa de Belo Horizonte. <br>
+            >Especialista em Retina e Vítreo pelo Hospital Santa Casa de Belo Horizonte.<br>
+          
+
+        </div>
+</section>
+
+               <div><class class="container-profissionais">
+            <img src="./imagens/fernanda.jpeg" class="about-img2" alt="Doutora Fernanda">
+            <p><strong>Dr. Fernanda</strong><br>
+           > Graduada em medicina pela Faculdade de Medicina da Universidade Federal de Minas Gerais, UFMG (2007).<br> 
+           >Fez Residência Médica em Otorrinolaringologia pelo Hospital das Clínicas da mesma universidade, HC-UFMG (2011).</p>
+            
+        </div>
+        <section>
+               <div><class class="container-profissionais">
+            <img src="./imagens/wallace alves.jpeg" class="about-img3" alt="Doutor wallace">
+            <p><strong>Dr. wallace</strong><br>
+            >Neurocirurgião.<br> >Formado na faculdade de medicina da  UFMG.<br> >Residencia medica na FHEMIG.<br> >Pos graduando em neurologia<br> >Psiquiatria adulto e infantil.<br>
+            
+        </div>
+<section>
+               <div><class class="container-profissionais">
+            <img src="./imagens/thalita.jpeg" class="about-img4" alt="Doutora thalita">
+            <p><strong> Dr. Thábata Machado</strong><br>
+> Graduação em Medicina pela Universidade Federal de São João Del-rei (UFSJ). <br>
+> Residência Médica em Oftalmologia pelo Instituto de Olhos Ciências Médicas (IOCM), Belo Horizonte. <br> 
+> Título de Especialista em Oftalmologia pelo Conselho Brasileiro de Oftalmologia (CBO). <br>
+> Fellowship de Estrabismo e Oftalmopediatria, pelo Instituto de Olhos Ciências Médicas (IOCM), Belo Horizonte. <br> 
+> Membro Titular da Sociedade Brasileira de Oftalmopediatria (SBOP). <br>
+> Membro Titular do Centro Brasileiro de Estrabismo (CBE). <br>
+Atendimentos em Oftalmologia Geral, com foco principalmente em Oftalmopediatria e Estrabismo.</p>
+            
+        </div>
+
+<section><div><class class="container-profissionais">
+            <img src="./imagens/dr mohamid.jpeg" class="about-img5" alt="Doutora Mahrmed">
+            <p><strong> Dr. Maarmedi Cunha</strong><br>
+           >Médica pela Faculdade de Medicina  da Universidade Federal de Minas Gerais.<br>
+           >Especialista em Oftalmologia pelo Hospital IPSEMG.<br>
+           >Especialista em Plástica Ocular pelo Centro Oftalmológico de Minas Gerais.<br>
+          
+
+        </div>
+</section>
+         
+    <!-- RODAPÉ -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 COB - Centro Oftalmológico Ouro Branco. Todos os direitos reservados.</p>
+            <p>Responsável Técnica: Dra. Daniela Rios - CRM/MG</p>
+        </div>
+    </footer>
+
+    <!-- LOGICA EM JAVASCRIPT PARA CONTROLAR OS POPUPS -->
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "flex";
+            document.body.style.overflow = "hidden"; // Trava a rolagem da página de fundo
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+            document.body.style.overflow = "auto"; // Libera a rolagem da página
+        }
+
+        // Fecha a tela se o usuário clicar na área escura fora da caixa de conteúdo
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = "none";
+                document.body.style.overflow = "auto";
+            }
+        }
+    </script>
+
+</body>
+</html>
